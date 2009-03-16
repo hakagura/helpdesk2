@@ -1,0 +1,11 @@
+<% @titlepage = "Problemas" %>
+
+<h2>Problema</h2>
+
+<%= link_to 'Ver Todos', problems_path %> | 
+<%= link_to 'Editar', edit_problem_path(@problem) %>
+
+<p>
+  <b>Descrição:</b>
+  <%=h @problem.description %>
+</p>

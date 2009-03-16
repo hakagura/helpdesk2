@@ -1,0 +1,40 @@
+body {
+	background: #E5E5E5;
+}
+#logo {
+	margin-top: 0.5em;
+	margin-left: 0.8em;
+	margin-bottom: 0.7em;
+	font-size: 2em;
+}
+#menu li {
+	margin-left: 0.8em;
+	list-style-type: none;
+	display: inline;
+	float: left;
+}
+
+#loginbox {
+	margin-right: 1em;
+	float: right;
+	text-align: left;
+}
+#notice {
+	float: left;
+	width: 100%;
+	background-color: #FFFFFF;
+	color: green;
+	margin-bottom: 1em;
+	margin-top: 0.7em;
+	padding: 0.2em;
+	text-align: center;
+}
+#bodyapp {
+	margin-right: 2em;
+	margin-left: 2em;
+	margin-top: 4em;
+}
+img {
+	border-style: none;
+	text-decoration: none;
+}

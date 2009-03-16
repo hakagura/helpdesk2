@@ -1,0 +1,15 @@
+<% @titlepage = "Problemas" %>
+
+<h2>Todos os Problemas</h2>
+
+<%= link_to 'Adicionar', new_problem_path %>
+
+<p>
+  <% for problem in @problems %>
+    <b><%= link_to problem.description, edit_problem_path(problem) %></b>
+    <sup>
+      <%= link_to "<img src=\'/images/rm.png\' />", problem, :confirm => 'Certeza?', :method => :delete %>
+    </sup>
+    <br />
+  <% end %>
+</p>

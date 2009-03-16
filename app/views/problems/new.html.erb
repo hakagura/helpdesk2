@@ -1,0 +1,17 @@
+<% @titlepage = "Problemas" %>
+
+<h2>Adicionar</h2>
+
+<%= link_to 'Voltar', problems_path %>
+
+<% form_for(@problem) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label "Descrição: " %>
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.submit "Adicionar" %>
+  </p>
+<% end %>

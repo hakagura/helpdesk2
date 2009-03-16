@@ -1,0 +1,19 @@
+<% @titlepage = "Problemas" %>
+
+<h2>Edição</h2>
+
+<%= link_to 'Voltar', problems_path %>
+
+<% form_for(@problem) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label "Descrição: " %>
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.submit "Atualizar" %>
+  </p>
+<% end %>
+
+<%#= link_to 'Ver', @problem %>

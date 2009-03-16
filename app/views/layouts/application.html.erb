@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title><%= @titlepage %></title>
+    <%= stylesheet_link_tag 'stylesheet' %>
+    <%= stylesheet_link_tag 'scaffold' %>
+  </head>
+  <body style="background: #E5E5E5;">
+    <div id="logo">HelpDesk2 - <%= @titlepage %></div>
+    <% unless current_user.nil? %>
+      <ul id="menu">
+        <li> <%= link_to "Home", '/' %></li>
+        <li> <%= link_to "Problemas", problems_url %></li>
+        <li> <%= link_to "Usuários", users_url %></li>
+      </ul>
+    <% end %>
+    <div id="loginbox">
+      <% unless current_user.nil? %>
+        <%= link_to current_user.login, :controller => :account, :action => current_user.id %>, <%= link_to "logout", logout_url %>
+      <% else %>
+        <%= link_to "login", login_url %>
+      <% end %>
+    </div>
+
+    <% unless flash[:notice].blank? %>
+      <div id="notice"><%= flash[:notice] %></div>
+    <% end %>
+
+    <div id="bodyapp">
+      <%= yield  %>
+    </div>
+
+  </body>
+</html>
